@@ -1,13 +1,17 @@
 'use client';
 
-import { useState } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 export default function AdminLoginPage() {
   const router = useRouter();
-  const sp = useSearchParams();
-  const redirectTo = sp.get('redirect') || '/admin';
+  const [redirectTo, setRedirectTo] = useState('/admin');
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    setRedirectTo(urlParams.get('redirect') || '/admin');
+  }, []);
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -30,7 +34,7 @@ export default function AdminLoginPage() {
         const data = await res.json().catch(() => ({}));
         setError(data.error || 'Login failed');
       }
-    } catch (e) {
+    } catch (err) {
       setError('Network error');
     } finally {
       setLoading(false);

@@ -14,10 +14,10 @@ export default function AboutPage() {
 
           <div className="prose prose-blue dark:prose-invert max-w-none">
             <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-              Introduction to ACM and the Anantya Event The Association for Computing Machinery (ACM) is the world's
+              Introduction to ACM and the Anantya Event The Association for Computing Machinery (ACM) is the world&apos;s
               largest educational and scientific computing society, uniting computing educators, researchers, and
               professionals. The ACM PCCoE Student Chapter organizes various technical and non-technical events to
-              promote innovation, peer learning, and community engagement. Anantya is ACM PCCoE's flagship event that
+              promote innovation, peer learning, and community engagement. Anantya is ACM PCCoE&apos;s flagship event that
               includes a range of competitions, workshops, and tech showcases.
             </p>
           </div>

@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     const res = NextResponse.json({ success: true });
     res.cookies.set(ADMIN_SESSION_COOKIE, token, getSessionCookieOptions());
     return res;
-  } catch (e) {
+  } catch (err) {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }
