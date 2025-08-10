@@ -117,7 +117,7 @@ export default function ContentSection() {
               Theme & Purpose
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              "Innovation Beyond Boundaries" - Shaping the Future of Technology
+              &quot;Innovation Beyond Boundaries&quot; - Shaping the Future of Technology
             </p>
           </div>
 

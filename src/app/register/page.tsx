@@ -167,7 +167,7 @@ export default function RegisterPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <p className="text-green-800 dark:text-green-400 font-medium text-sm sm:text-base">
-                      Registration successful! We'll contact you soon.
+                      Registration successful!       We&apos;ll contact you soon
                     </p>
                   </div>
                 </div>

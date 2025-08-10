@@ -20,7 +20,7 @@ export async function GET(request: NextRequest) {
       data: registrations,
       timestamp: new Date().toISOString(),
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { success: false, error: 'Internal server error' },
       { status: 500 }

@@ -27,7 +27,7 @@ export default function ThankYouPage() {
           </h2>
 
           <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-            Your registration has been successfully submitted. We'll contact you soon with further details about the event.
+            Your registration has been successfully submitted. We&apos;ll contact you soon with further details about the event.
           </p>
 
           {/* Action Buttons */}
@@ -55,7 +55,7 @@ export default function ThankYouPage() {
         <div className="mt-8 text-center">
           <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 shadow-lg">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-              What's Next?
+              What&apos;s Next?
             </h3>
             <div className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
               <div className="flex items-center justify-center space-x-2">
