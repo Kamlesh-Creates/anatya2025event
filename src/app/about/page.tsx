@@ -1,10 +1,8 @@
 import Link from "next/link";
-import Navigation from "@/components/Navigation";
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-blue-900">
-      <Navigation showAdmin={false} />
       
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-8 md:p-12">

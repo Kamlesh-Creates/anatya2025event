@@ -3,8 +3,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 
 interface FormData {
   fullName: string;
@@ -140,7 +138,6 @@ export default function RegisterPage() {
       
       {/* Content */}
       <div className="relative z-10">
-        <Navigation />
         
         {/* Hero Section */}
         <section className="py-8 sm:py-12 lg:py-16">
@@ -334,8 +331,6 @@ export default function RegisterPage() {
             </div>
           </div>
         </div>
-
-        <Footer />
       </div>
     </div>
   );
