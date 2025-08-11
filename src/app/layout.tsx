@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
-import { Geist } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+import AdminInitializer from '@/components/AdminInitializer';
 
-const geist = Geist({
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Anantya 2025 - ACM PCCoE Technical Fest",
-  description: "Join us for Anantya 2025, the flagship technical fest organized by ACM PCCoE. Experience innovation, competition, and excellence.",
+  title: 'Anantya 2025',
+  description: 'Welcome to Anantya 2025 - A celebration of innovation and creativity',
 };
 
 export default function RootLayout({
@@ -18,8 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${geist.className} antialiased`}>
-        {children}
+      <body className={inter.className}>
+        <AdminInitializer />
+        <Navigation />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
