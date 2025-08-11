@@ -23,7 +23,7 @@ export default function Navigation({ showAdmin = true }: NavigationProps) {
             Anantya 2025
           </Link>
           
-          {/* Desktop Navigation */}
+        
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <Link href="/" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
@@ -39,7 +39,7 @@ export default function Navigation({ showAdmin = true }: NavigationProps) {
             </div>
           </div>
           
-          {/* Mobile Menu Button */}
+         
           <div className="md:hidden flex items-center space-x-2">
             {showAdmin && <AdminNavButton />}
             <button
@@ -58,7 +58,7 @@ export default function Navigation({ showAdmin = true }: NavigationProps) {
           </div>
         </div>
         
-        {/* Mobile Navigation Menu */}
+       
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-b-lg shadow-lg">

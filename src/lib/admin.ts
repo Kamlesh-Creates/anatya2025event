@@ -29,13 +29,13 @@ export async function verifyAdminCredentials(email: string, password: string): P
       return null;
     }
 
-    // Verify password
+   
     const isValid = await bcrypt.compare(password, admin.passwordHash);
     if (!isValid) {
       return null;
     }
 
-    // Update last login
+    
     await collection.updateOne(
       { _id: admin._id },
       { $set: { lastLogin: new Date() } }

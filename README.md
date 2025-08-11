@@ -1,38 +1,32 @@
-# Anantya 2025 Registration
+# Anantya 2025
 
-Welcome to the official registration portal for **Anantya 2025**, the ultimate technical fest experience!
+Technical fest registration website for ACM PCCoE.
 
-## 🚀 About Anantya
+##  Quick Start
 
-Anantya is the annual technical fest, bringing together students, innovators, and tech enthusiasts for a celebration of technology, creativity, and collaboration. Join us for workshops, competitions, talks, and much more!
+```bash
+npm install
+npm run dev
+```
 
-## 📝 Registration
+##  Admin Login
 
-To register for Anantya 2025:
+- **URL**: `/admin/login`
+- **Email**: `admin@anantya2025.com`
+- **Password**: `admin123`
 
-1. Visit the registration page at `/register`.
-2. Fill in your details in the registration form.
-3. Submit the form.
-4. Upon successful registration, you will be redirected to a thank you page and contacted soon by our team.
+## 📱 Pages
 
-**Fields required:**
-- Full Name
-- Email
-- Phone Number
-- College Name
-- Year of Study
+- `/` - Home
+- `/register` - Student registration
+- `/admin` - Admin dashboard
 
-## 💡 Features
+## 🛠️ Tech
 
-- Modern, responsive registration form
-- Real-time validation and feedback
-- Success and error notifications
-- Beautiful, themed UI
+- Next.js + React + TypeScript
+- Tailwind CSS
+- MongoDB
 
-## 🛠️ Tech Stack
+---
 
-- **Next.js** (App Router)
-- **React**
-- **Tailwind CSS**
-
-## 📦 Project Structure
+**Built for Anantya 2025** 

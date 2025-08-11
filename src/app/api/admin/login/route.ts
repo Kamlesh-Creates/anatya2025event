@@ -10,17 +10,17 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Email and password are required' }, { status: 400 });
     }
 
-    // Verify credentials against MongoDB
+    
     const admin = await verifyAdminCredentials(email, password);
     
     if (!admin) {
       return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 });
     }
 
-    // Create JWT token
+    
     const token = await createAdminJwt(admin.email);
     
-    // Set session cookie
+    
     const res = NextResponse.json({ 
       success: true, 
       message: 'Login successful',

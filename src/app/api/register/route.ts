@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
   try {
     const body: RegistrationInput = await request.json();
     
-    // Validate required fields
+    
     const { fullName, email, phoneNumber, department, yearOfStudy } = body;
     
     if (!fullName || !email || !phoneNumber || !department || !yearOfStudy) {
@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Validate email format
+    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Validate phone number (10 digits)
+   
     const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(phoneNumber.replace(/\s/g, ''))) {
       return NextResponse.json(
@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Validate full name length
+   
     if (fullName.trim().length < 2) {
       return NextResponse.json(
         { error: 'Full name must be at least 2 characters' },
@@ -42,10 +42,10 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Connect to MongoDB and save registration
+    
     const collection = await getRegistrationsCollection();
     
-    // Check if email already exists
+   
     const existingRegistration = await collection.findOne({ email: email.toLowerCase().trim() });
     if (existingRegistration) {
       return NextResponse.json(
@@ -54,10 +54,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Generate unique registration ID
+    
     const registrationId = `ANANTYA2025-${Date.now()}-${Math.random().toString(36).substr(2, 9).toUpperCase()}`;
     
-    // Prepare registration data
     const registrationData: Omit<Registration, '_id'> = {
       fullName: fullName.trim(),
       email: email.toLowerCase().trim(),
@@ -70,7 +69,7 @@ export async function POST(request: NextRequest) {
       status: 'active'
     };
 
-    // Save to database
+   
     const result = await collection.insertOne(registrationData);
     
     console.log('Registration saved to database:', {
@@ -101,7 +100,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// Handle OPTIONS request for CORS
+
 export async function OPTIONS() {
   return NextResponse.json(
     {},

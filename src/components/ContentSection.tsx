@@ -109,7 +109,7 @@ export default function ContentSection() {
         </div>
       </section>
 
-      {/* Theme and Purpose Section */}
+      
       <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-900 dark:to-blue-900/50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
@@ -133,7 +133,7 @@ export default function ContentSection() {
             ))}
           </div>
 
-          {/* Event Categories */}
+         
           <div className="mt-12 sm:mt-16">
             <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white text-center mb-6 sm:mb-8">Event Categories</h3>
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -150,7 +150,7 @@ export default function ContentSection() {
         </div>
       </section>
 
-      {/* Call to Action */}
+      
       <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6">

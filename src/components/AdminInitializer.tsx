@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 export default function AdminInitializer() {
   useEffect(() => {
-    // Initialize default admin user when the app starts
+    
     const initAdmin = async () => {
       try {
         const response = await fetch('/api/admin/init', {
