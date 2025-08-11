@@ -103,7 +103,7 @@ Returns list of all admin users (passwords excluded).
 ### Test MongoDB Connection
 
 ```bash
-node src/scripts/test-admin.js
+npx tsx src/scripts/test-admin.ts
 ```
 
 This script will:

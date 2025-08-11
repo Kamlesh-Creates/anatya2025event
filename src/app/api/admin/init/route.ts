@@ -1,9 +1,9 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { initializeDefaultAdmin } from '@/lib/admin';
 
-export async function POST(req: NextRequest) {
+export async function POST() {
   try {
-    // Initialize default admin user
+   
     await initializeDefaultAdmin();
     
     return NextResponse.json({ 

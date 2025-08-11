@@ -1,6 +1,7 @@
+// Test script for admin authentication system
+// Run with: npx tsx src/scripts/test-admin.ts
 
-
-const { MongoClient } = require('mongodb');
+import { MongoClient } from 'mongodb';
 
 async function testAdminSystem() {
   const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017';

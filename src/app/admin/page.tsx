@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function AdminDashboard() {
   const router = useRouter();
-  const [adminInfo, setAdminInfo] = useState<any>(null);
+  const [adminInfo, setAdminInfo] = useState<{ success: boolean; admins?: Array<{ email: string; role: string; createdAt: string }> } | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -88,6 +88,11 @@ export default function AdminDashboard() {
                 <p className="text-green-700 dark:text-green-300">
                   Your login is now powered by MongoDB for faster authentication and better security.
                 </p>
+                {adminInfo?.admins && (
+                  <p className="text-sm text-green-600 dark:text-green-400 mt-2">
+                    Total admin users: {adminInfo.admins.length}
+                  </p>
+                )}
               </div>
             </div>
           </div>
